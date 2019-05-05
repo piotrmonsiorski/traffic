@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+//    text-align: center;
+    font-family: sans-serif;
+}
+
+.city {
+    
+}
+
+.map-wrap {
+    position: relative;
+}
+
+.map {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    .row {
+        display: flex;
+        &:nth-child(5n) {
+            background-color: rgba(0,0,0,0.05);
+        }
+        .field {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 15px;
+            height: 15px;
+            border: 1px solid #ddd;
+            &:nth-child(5n) {
+                background-color: rgba(0,0,0,0.05);
+            }
+            .joint {
+                width: 8px;
+                height: 8px;
+                background-color: darkmagenta;
+                border-radius: 50%;
+                position: relative;
+                span {
+                    position: absolute;
+                    top: -15px;
+                    left: -11px;
+                    width: 30px;
+                    padding: 1px;
+                    font-size: 8px;
+                    font-weight: bold;
+                    border-radius: 5px;
+                    border: 1px solid #999;
+                    background-color: white;
+                    text-align: center;
+                    
+                }
+            }
+        }
+    }
+}
+
+.roads {
+    .road {
+        position: absolute;
+        height: 4px;
+        transform-origin: 2px 2px;
+        background-color: red;
+    }
+}
+
+.joints {
+    z-index: 9;
+    z-index: 8;
+}
+
