@@ -88,7 +88,19 @@ class Map {
             [ [3,4], [6,15] ],
             [ [6,15], [10,5] ],
             [ [6,15], [14,18] ],
-            [ [6,15], [17,15] ]
+            [ [6,15], [17,15] ],
+            [ [20,4], [10,5] ],
+            [ [20,4], [17,15] ],
+            [ [14,18], [17,15] ],
+            [ [10,5], [15,10] ],
+            [ [17,15], [15,10] ],
+            [ [20,4], [15,10] ],          
+            [ [7,22], [6,15] ],
+            [ [7,22], [14,18] ],
+            [ [2,12], [3,4] ],
+            [ [2,12], [6,15] ],
+            [ [2,12], [2,20] ],
+            [ [2,20], [7,22] ]
         ];
         return roads;
     }
@@ -168,6 +180,9 @@ class Map {
                     divJoint.innerHTML = `<span>${field.jointNumber}</span>`;
                     divField.appendChild(divJoint);
                 }
+                divField.addEventListener('click', function() {
+                    console.log(rowIndex, fieldIndex);
+                });
                 divRow.appendChild(divField);
             });
             divJoints.appendChild(divRow);
